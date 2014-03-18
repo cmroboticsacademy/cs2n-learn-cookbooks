@@ -21,7 +21,7 @@ do_start() {
 
                 while [ /bin/true ]
                 do
-                  /usr/bin/s3fs cmu-moodle-data -o allow_other -ouse_cache=/mnt/moodledatacache /mnt/moodledata
+                  sudo /usr/bin/s3fs cmu-moodle-files -o allow_other -ouse_cache=/mnt/moodledatacache_temp /mnt/moodledata_temp/filedir
                   
                   if [ $? -eq 0 ]; then
                     break

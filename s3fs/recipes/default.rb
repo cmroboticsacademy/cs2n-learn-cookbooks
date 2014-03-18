@@ -35,16 +35,15 @@ bash "install s3fs" do
   make
   sudo make install
 
-  sudo mkdir -p /mnt/moodledata
-  sudo chown www-data:www-data /mnt/moodledata
-  sudo echo "cmu-moodle-data:AKIAIPAHDQMQZCHO3NWA:ZDAMfDgDymhlN+KQ03jYBKSJyWho8Ez0KumQyzTl" > /etc/passwd-s3fs
+  sudo mkdir -p /mnt/moodledata_temp
+  sudo chown www-data:www-data /mnt/moodledata_temp
+  sudo echo "AKIAIPAHDQMQZCHO3NWA:ZDAMfDgDymhlN+KQ03jYBKSJyWho8Ez0KumQyzTl" > /etc/passwd-s3fs
 
   sudo chmod 640 /etc/passwd-s3fs
-  sudo mkdir -p /mnt/moodledatacache
-  sudo chown www-data:www-data /mnt/moodledatacache
+  sudo mkdir -p /mnt/moodledatacache_temp
+  sudo chown www-data:www-data /mnt/moodledatacache_temp
 
-  sudo /usr/bin/s3fs cmu-moodle-data -o allow_other -ouse_cache=/mnt/moodledatacache /mnt/moodledata
-
+  sudo /usr/bin/s3fs cmu-moodle-files -o allow_other -ouse_cache=/mnt/moodledatacache_temp /mnt/moodledata_temp/filedir
 
   EOH
   
@@ -57,5 +56,7 @@ cookbook_file value_for_platform([ "centos", "redhat", "fedora", "suse" ] => {"d
   group "root"
   mode 0755
 end
+
+
 
 
