@@ -34,8 +34,8 @@ EOH
 end
 
 directory "#{node[:php][:eaccelerator][:cache_dir]}" do
-  owner node[:apache][:user]
-  group node[:apache][:group]
+  owner "www-data"
+  group "www-data"
   mode "0755"
   action :create
 end
