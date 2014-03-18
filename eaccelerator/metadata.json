@@ -1,0 +1,48 @@
+{
+  "attributes": {
+  },
+  "providing": {
+  },
+  "dependencies": {
+  },
+  "maintainer": "Yevgeniy Viktorov",
+  "replacing": {
+  },
+  "maintainer_email": "wik@rentasite.com.ua",
+  "groupings": {
+  },
+  "platforms": {
+    "debian": [
+
+    ],
+    "fedora": [
+
+    ],
+    "centos": [
+
+    ],
+    "suse": [
+
+    ],
+    "ubuntu": [
+
+    ],
+    "redhat": [
+
+    ]
+  },
+  "license": "Apache 2.0",
+  "version": "0.1.1",
+  "recommendations": {
+  },
+  "recipes": {
+    "eaccelerator": "build eAccelerator from sources"
+  },
+  "suggestions": {
+  },
+  "name": "eaccelerator",
+  "long_description": "",
+  "description": "build eAccelerator from sources",
+  "conflicting": {
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "maintainer": "Tim Hunkele",
+  "description": "",
+  "recommendations": {
+
+  },
+  "maintainer_email": "thunkele@rec.ri.cmu.edu",
+  "recipes": {
+    "cron::default": "sets up cron jobs"
+  },
+  "suggestions": {
+
+  },
+  "platforms": {
+    "ubuntu": [
+
+    ],
+    "centos": [
+
+    ],
+    "debian": [
+
+    ],
+    "redhat": [
+
+    ]
+  },
+  "version": "0.0.1",
+  "name": "cron",
+  "conflicting": {
+
+  },
+  "attributes": {
+    "access_key": {
+      "default": "",
+      "type": "string",
+      "multiple_values": false,
+      "description": "amazon key",
+      "display_name": "AMAZON_ACCESS_KEY_ID",
+      "recipes": [
+
+      ],
+      "required": true
+    },
+    "secret_key": {
+      "default": "",
+      "type": "string",
+      "multiple_values": false,
+      "description": "amazon secret access key",
+      "display_name": "AMAZON_SECRET_ACCESS_KEY",
+      "recipes": [
+
+      ],
+      "required": true
+    
+    }
+    
+  },
+  "providing": {
+    "cron": [
+
+    ]
+  },
+  "license": "Apache 2.0",
+  "long_description": "",
+  "replacing": {
+
+  },
+  "dependencies": {
+
+  }
+}
