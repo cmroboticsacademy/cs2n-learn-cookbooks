@@ -42,6 +42,8 @@ bash "install s3fs" do
   sudo chmod 640 /etc/passwd-s3fs
   sudo mkdir -p /mnt/moodledatacache_temp
   sudo chown www-data:www-data /mnt/moodledatacache_temp
+  sudo mkdir -p /mnt/moodledatacache_temp/filedir
+  sudo chown www-data:www-data /mnt/moodledatacache_temp/filedir
 
   sudo /usr/bin/s3fs cmu-moodle-files -o allow_other -ouse_cache=/mnt/moodledatacache_temp /mnt/moodledata_temp/filedir
 
