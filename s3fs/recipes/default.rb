@@ -37,7 +37,7 @@ bash "install s3fs mount drives for first time" do
 
   sudo mkdir -p /mnt/moodledata_temp
   sudo chown www-data:www-data /mnt/moodledata_temp
-  sudo echo "AKIAIPAHDQMQZCHO3NWA:ZDAMfDgDymhlN+KQ03jYBKSJyWho8Ez0KumQyzTl" > /etc/passwd-s3fs
+  sudo echo "AKIAJJBZOV74Z25E42UQ:KYA5VLO2Azybu5VRheB30x65LZOUymfQeZfQTPZe" > /etc/passwd-s3fs
 
   sudo chmod 640 /etc/passwd-s3fs
   sudo mkdir -p /mnt/moodledatacache_temp
