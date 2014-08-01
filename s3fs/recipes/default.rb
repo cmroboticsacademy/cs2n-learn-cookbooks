@@ -26,7 +26,7 @@ remote_file "/tmp/s3fs-1.74.tar.gz" do
   mode 0644
 end
 
-bash "install s3fs" do
+bash "install s3fs mount drives for first time" do
   cwd "/tmp"
   code <<-EOH
   tar zxvf s3fs-1.74.tar.gz
