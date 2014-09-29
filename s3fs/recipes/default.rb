@@ -48,11 +48,12 @@ bash "install s3fs mount drives for first time" do
 
   sudo mkdir -p /mnt/moodledata_temp
   sudo chown www-data:www-data /mnt/moodledata_temp
+  
+  sudo mkdir -p /mnt/moodledata_temp/filedir
+  sudo chown www-data:www-data /mnt/moodledata_temp/filedir
 
   sudo mkdir -p /mnt/moodledatacache_temp
   sudo chown www-data:www-data /mnt/moodledatacache_temp
-  sudo mkdir -p /mnt/moodledatacache_temp/filedir
-  sudo chown www-data:www-data /mnt/moodledatacache_temp/filedir
 
   sudo /usr/bin/s3fs cmu-moodle-files -o allow_other -ouse_cache=/mnt/moodledatacache_temp /mnt/moodledata_temp/filedir
 
