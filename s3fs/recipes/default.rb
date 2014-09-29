@@ -29,7 +29,7 @@ end
 bash "set passwd-s3fs" do
   cwd "/tmp"
   code <<-EOH
-  sudo echo "AKIAJJBZOV74Z25E42UQ:KYA5VLO2Azybu5VRheB30x65LZOUymfQeZfQTPZe" > /etc/passwd-s3fs
+  sudo echo "AKIAJJBZOV74Z25E42UQ:KYA5VLO2Azybu5VRheB30x65LZOUymfQeZfQTPZe" | sudo tee /etc/passwd-s3fs
   sudo chmod 640 /etc/passwd-s3fs
 
   EOH
