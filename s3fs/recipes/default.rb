@@ -26,20 +26,29 @@ remote_file "/tmp/s3fs-1.74.tar.gz" do
   mode 0644
 end
 
+bash "set passwd-s3fs" do
+  cwd "/tmp"
+  code <<-EOH
+  sudo echo "AKIAJJBZOV74Z25E42UQ:KYA5VLO2Azybu5VRheB30x65LZOUymfQeZfQTPZe" > /etc/passwd-s3fs
+  sudo chmod 640 /etc/passwd-s3fs
+
+  EOH
+  
+  not_if { File.exists?("/etc/passwd-s3fs") }
+end
+
 bash "install s3fs mount drives for first time" do
   cwd "/tmp"
   code <<-EOH
   tar zxvf s3fs-1.74.tar.gz
   cd s3fs-1.74
-  ./configure --prefix=/usr
+  sudo ./configure --prefix=/usr
   make
   sudo make install
 
   sudo mkdir -p /mnt/moodledata_temp
   sudo chown www-data:www-data /mnt/moodledata_temp
-  sudo echo "AKIAJJBZOV74Z25E42UQ:KYA5VLO2Azybu5VRheB30x65LZOUymfQeZfQTPZe" > /etc/passwd-s3fs
 
-  sudo chmod 640 /etc/passwd-s3fs
   sudo mkdir -p /mnt/moodledatacache_temp
   sudo chown www-data:www-data /mnt/moodledatacache_temp
   sudo mkdir -p /mnt/moodledatacache_temp/filedir
