@@ -7,8 +7,8 @@
 ###
 # The following shows how to override the MySQL max_connections settings:
 #
-normal[:mysql][:tunable][:key_buffer] = '160M'
-normal[:mysql][:tunable][:max_allowed_packet] = '160M'
+normal[:mysql][:tunable][:key_buffer] = '64M'
+normal[:mysql][:tunable][:max_allowed_packet] = '64M'
 
 normal[:mysql][:tunable][:query_cache_limit] = '10M'
-normal[:mysql][:tunable][:query_cache_size] = '160M'
+normal[:mysql][:tunable][:query_cache_size] = '64M'
