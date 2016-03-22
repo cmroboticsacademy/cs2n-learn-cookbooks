@@ -10,6 +10,7 @@ file "/etc/php5/apache2/conf.d/cs2n-learn.ini" do
   upload_max_filesize = 2500M
   post_max_size = 2500M
   max_execution_time = 3600
+  memory_limit = 512M
  
   EOH
   notifies :restart, resources(:service => 'apache2')
