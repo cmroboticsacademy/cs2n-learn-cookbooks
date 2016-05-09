@@ -1,0 +1,5 @@
+name        "foundation_override"
+description "Override the _functions file due to incompatible ruby/rails version"
+maintainer  "Vu Nguyen"
+maintainer_email "vnguyen@nrec.ri.cmu.edu"
+version     "0.0.1"
