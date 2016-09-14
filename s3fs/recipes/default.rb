@@ -22,7 +22,7 @@ end
 
 
 remote_file "/tmp/s3fs-1.74.tar.gz" do
-  source "http://s3fs.googlecode.com/files/s3fs-1.74.tar.gz"
+  source "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/s3fs/s3fs-1.74.tar.gz"
   mode 0644
 end
 
