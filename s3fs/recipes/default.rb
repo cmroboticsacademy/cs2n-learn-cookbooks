@@ -2,8 +2,8 @@
   package pkg
 end
 
-remote_file "/tmp/fuse-2.9.3.tar.gz" do
-  source "https://github.com/libfuse/libfuse/releases/download/fuse_2_9_4/fuse-2.9.3.tar.gz"
+cookbook_file "/tmp/fuse-2.9.3.tar.gz" do
+  source "fuse-2.9.3.tar.gz"
   mode 0644
 end
 
@@ -21,8 +21,8 @@ bash "install fuse" do
 end
 
 
-remote_file "/tmp/s3fs-1.74.tar.gz" do
-  source "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/s3fs/s3fs-1.74.tar.gz"
+cookbook_file "/tmp/s3fs-1.74.tar.gz" do
+  source "s3fs-1.74.tar.gz"
   mode 0644
 end
 
